@@ -107,7 +107,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 23,
+   "execution_count": 2,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -121,9 +121,7 @@
     "# read in the json files\n",
     "offer = pd.read_json('data/portfolio.json', orient='records', lines=True) \n",
     "user = pd.read_json('data/profile.json', orient='records', lines=True)    \n",
-    "transaction = pd.read_json('data/transcript.json', orient='records', lines=True)\n",
-    "\n",
-    "pd.set_option('display.max_colwidth', -1)"
+    "transaction = pd.read_json('data/transcript.json', orient='records', lines=True)"
    ]
   },
   {
@@ -149,7 +147,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 24,
+   "execution_count": 3,
    "metadata": {},
    "outputs": [
     {
@@ -174,7 +172,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 25,
+   "execution_count": 4,
    "metadata": {
     "scrolled": true
    },
@@ -254,14 +252,14 @@
       ],
       "text/plain": [
        "   age  became_member_on gender                                id    income\n",
-       "0  118  20170212          None   68be06ca386d4c31939f3a4f0e3dd783 NaN      \n",
-       "1  55   20170715          F      0610b486422d4921ae7d2bf64640c50b  112000.0\n",
-       "2  118  20180712          None   38fe809add3b4fcf9315a9694bb96ff5 NaN      \n",
-       "3  75   20170509          F      78afa995795e4d85b5d9ceeca43f5fef  100000.0\n",
-       "4  118  20170804          None   a03223e636434f42ac4c3df47e8bac43 NaN      "
+       "0  118          20170212   None  68be06ca386d4c31939f3a4f0e3dd783       NaN\n",
+       "1   55          20170715      F  0610b486422d4921ae7d2bf64640c50b  112000.0\n",
+       "2  118          20180712   None  38fe809add3b4fcf9315a9694bb96ff5       NaN\n",
+       "3   75          20170509      F  78afa995795e4d85b5d9ceeca43f5fef  100000.0\n",
+       "4  118          20170804   None  a03223e636434f42ac4c3df47e8bac43       NaN"
       ]
      },
-     "execution_count": 25,
+     "execution_count": 4,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -279,7 +277,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 26,
+   "execution_count": 5,
    "metadata": {},
    "outputs": [
     {
@@ -308,7 +306,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 27,
+   "execution_count": 6,
    "metadata": {},
    "outputs": [
     {
@@ -316,13 +314,13 @@
       "text/plain": [
        "age                 False\n",
        "became_member_on    False\n",
-       "gender              True \n",
+       "gender               True\n",
        "id                  False\n",
-       "income              True \n",
+       "income               True\n",
        "dtype: bool"
       ]
      },
-     "execution_count": 27,
+     "execution_count": 6,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -348,7 +346,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 28,
+   "execution_count": 7,
    "metadata": {},
    "outputs": [
     {
@@ -357,7 +355,7 @@
        "2175"
       ]
      },
-     "execution_count": 28,
+     "execution_count": 7,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -376,7 +374,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 29,
+   "execution_count": 8,
    "metadata": {
     "scrolled": true
    },
@@ -387,7 +385,7 @@
        "2175"
       ]
      },
-     "execution_count": 29,
+     "execution_count": 8,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -406,18 +404,18 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 30,
+   "execution_count": 9,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
        "118    2175\n",
-       "101    5   \n",
+       "101       5\n",
        "Name: age, dtype: int64"
       ]
      },
-     "execution_count": 30,
+     "execution_count": 9,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -436,7 +434,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 31,
+   "execution_count": 10,
    "metadata": {},
    "outputs": [
     {
@@ -444,13 +442,13 @@
       "text/plain": [
        "age                 2175\n",
        "became_member_on    2175\n",
-       "gender              0   \n",
+       "gender                 0\n",
        "id                  2175\n",
-       "income              0   \n",
+       "income                 0\n",
        "dtype: int64"
       ]
      },
-     "execution_count": 31,
+     "execution_count": 10,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -461,7 +459,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 32,
+   "execution_count": 11,
    "metadata": {},
    "outputs": [
     {
@@ -470,7 +468,7 @@
        "2175"
       ]
      },
-     "execution_count": 32,
+     "execution_count": 11,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -481,7 +479,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 33,
+   "execution_count": 12,
    "metadata": {},
    "outputs": [
     {
@@ -490,7 +488,7 @@
        "2175"
       ]
      },
-     "execution_count": 33,
+     "execution_count": 12,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -515,7 +513,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 34,
+   "execution_count": 13,
    "metadata": {},
    "outputs": [
     {
@@ -524,7 +522,7 @@
        "0.12794117647058822"
       ]
      },
-     "execution_count": 34,
+     "execution_count": 13,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -551,7 +549,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 35,
+   "execution_count": 14,
    "metadata": {},
    "outputs": [
     {
@@ -594,7 +592,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 36,
+   "execution_count": 15,
    "metadata": {},
    "outputs": [
     {
@@ -630,7 +628,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 37,
+   "execution_count": 16,
    "metadata": {},
    "outputs": [
     {
@@ -661,7 +659,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 38,
+   "execution_count": 17,
    "metadata": {},
    "outputs": [
     {
@@ -692,1185 +690,6 @@
     "    * Income group\n",
     "    * Gender group"
    ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### 4.2 Explore offer data (portfolio.json)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "**- Dimension of data**"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 42,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "(10, 6)"
-      ]
-     },
-     "execution_count": 42,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "offer.shape"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "**- Display data**"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 43,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>channels</th>\n",
-       "      <th>difficulty</th>\n",
-       "      <th>duration</th>\n",
-       "      <th>id</th>\n",
-       "      <th>offer_type</th>\n",
-       "      <th>reward</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>[email, mobile, social]</td>\n",
-       "      <td>10</td>\n",
-       "      <td>7</td>\n",
-       "      <td>ae264e3637204a6fb9bb56bc8210ddfd</td>\n",
-       "      <td>bogo</td>\n",
-       "      <td>10</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>[web, email, mobile, social]</td>\n",
-       "      <td>10</td>\n",
-       "      <td>5</td>\n",
-       "      <td>4d5c57ea9a6940dd891ad53e9dbe8da0</td>\n",
-       "      <td>bogo</td>\n",
-       "      <td>10</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>[web, email, mobile]</td>\n",
-       "      <td>0</td>\n",
-       "      <td>4</td>\n",
-       "      <td>3f207df678b143eea3cee63160fa8bed</td>\n",
-       "      <td>informational</td>\n",
-       "      <td>0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>3</th>\n",
-       "      <td>[web, email, mobile]</td>\n",
-       "      <td>5</td>\n",
-       "      <td>7</td>\n",
-       "      <td>9b98b8c7a33c4b65b9aebfe6a799e6d9</td>\n",
-       "      <td>bogo</td>\n",
-       "      <td>5</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>4</th>\n",
-       "      <td>[web, email]</td>\n",
-       "      <td>20</td>\n",
-       "      <td>10</td>\n",
-       "      <td>0b1e1539f2cc45b7b9fa7c272da2e1d7</td>\n",
-       "      <td>discount</td>\n",
-       "      <td>5</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>5</th>\n",
-       "      <td>[web, email, mobile, social]</td>\n",
-       "      <td>7</td>\n",
-       "      <td>7</td>\n",
-       "      <td>2298d6c36e964ae4a3e7e9706d1fb8c2</td>\n",
-       "      <td>discount</td>\n",
-       "      <td>3</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>6</th>\n",
-       "      <td>[web, email, mobile, social]</td>\n",
-       "      <td>10</td>\n",
-       "      <td>10</td>\n",
-       "      <td>fafdcd668e3743c1bb461111dcafc2a4</td>\n",
-       "      <td>discount</td>\n",
-       "      <td>2</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>7</th>\n",
-       "      <td>[email, mobile, social]</td>\n",
-       "      <td>0</td>\n",
-       "      <td>3</td>\n",
-       "      <td>5a8bc65990b245e5a138643cd4eb9837</td>\n",
-       "      <td>informational</td>\n",
-       "      <td>0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>8</th>\n",
-       "      <td>[web, email, mobile, social]</td>\n",
-       "      <td>5</td>\n",
-       "      <td>5</td>\n",
-       "      <td>f19421c1d4aa40978ebb69ca19b0e20d</td>\n",
-       "      <td>bogo</td>\n",
-       "      <td>5</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>9</th>\n",
-       "      <td>[web, email, mobile]</td>\n",
-       "      <td>10</td>\n",
-       "      <td>7</td>\n",
-       "      <td>2906b810c7d4411798c6938adc9daaa5</td>\n",
-       "      <td>discount</td>\n",
-       "      <td>2</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "                       channels  difficulty  duration  \\\n",
-       "0  [email, mobile, social]       10          7          \n",
-       "1  [web, email, mobile, social]  10          5          \n",
-       "2  [web, email, mobile]          0           4          \n",
-       "3  [web, email, mobile]          5           7          \n",
-       "4  [web, email]                  20          10         \n",
-       "5  [web, email, mobile, social]  7           7          \n",
-       "6  [web, email, mobile, social]  10          10         \n",
-       "7  [email, mobile, social]       0           3          \n",
-       "8  [web, email, mobile, social]  5           5          \n",
-       "9  [web, email, mobile]          10          7          \n",
-       "\n",
-       "                                 id     offer_type  reward  \n",
-       "0  ae264e3637204a6fb9bb56bc8210ddfd  bogo           10      \n",
-       "1  4d5c57ea9a6940dd891ad53e9dbe8da0  bogo           10      \n",
-       "2  3f207df678b143eea3cee63160fa8bed  informational  0       \n",
-       "3  9b98b8c7a33c4b65b9aebfe6a799e6d9  bogo           5       \n",
-       "4  0b1e1539f2cc45b7b9fa7c272da2e1d7  discount       5       \n",
-       "5  2298d6c36e964ae4a3e7e9706d1fb8c2  discount       3       \n",
-       "6  fafdcd668e3743c1bb461111dcafc2a4  discount       2       \n",
-       "7  5a8bc65990b245e5a138643cd4eb9837  informational  0       \n",
-       "8  f19421c1d4aa40978ebb69ca19b0e20d  bogo           5       \n",
-       "9  2906b810c7d4411798c6938adc9daaa5  discount       2       "
-      ]
-     },
-     "execution_count": 43,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "offer"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### 4.3 Explore transaction data (transcript.json)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "**- Dimension of data**"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 90,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "(306534, 4)"
-      ]
-     },
-     "execution_count": 90,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "transaction.shape"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "**- Top 5 rows**"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 93,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>event</th>\n",
-       "      <th>person</th>\n",
-       "      <th>time</th>\n",
-       "      <th>value</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>78afa995795e4d85b5d9ceeca43f5fef</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>a03223e636434f42ac4c3df47e8bac43</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '0b1e1539f2cc45b7b9fa7c272da2e1d7'}</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>e2127556f4f64592b11af22de27a7932</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '2906b810c7d4411798c6938adc9daaa5'}</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>3</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>8ec6ce2a7e7949b1bf142def7d0e0586</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': 'fafdcd668e3743c1bb461111dcafc2a4'}</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>4</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>68617ca6246f4fbc85e91a2a49552598</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '4d5c57ea9a6940dd891ad53e9dbe8da0'}</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "            event                            person  time  \\\n",
-       "0  offer received  78afa995795e4d85b5d9ceeca43f5fef  0      \n",
-       "1  offer received  a03223e636434f42ac4c3df47e8bac43  0      \n",
-       "2  offer received  e2127556f4f64592b11af22de27a7932  0      \n",
-       "3  offer received  8ec6ce2a7e7949b1bf142def7d0e0586  0      \n",
-       "4  offer received  68617ca6246f4fbc85e91a2a49552598  0      \n",
-       "\n",
-       "                                              value  \n",
-       "0  {'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}  \n",
-       "1  {'offer id': '0b1e1539f2cc45b7b9fa7c272da2e1d7'}  \n",
-       "2  {'offer id': '2906b810c7d4411798c6938adc9daaa5'}  \n",
-       "3  {'offer id': 'fafdcd668e3743c1bb461111dcafc2a4'}  \n",
-       "4  {'offer id': '4d5c57ea9a6940dd891ad53e9dbe8da0'}  "
-      ]
-     },
-     "execution_count": 93,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "transaction.head()"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "**- First, I will merge columns from two different dataframes to avoid complex statements**"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 94,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "new_data = transaction.merge(user, how=\"left\", left_on=\"person\", right_on=\"id\")"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 95,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "True"
-      ]
-     },
-     "execution_count": 95,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "new_data.shape[0] == transaction.shape[0]"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 96,
-   "metadata": {
-    "scrolled": true
-   },
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>event</th>\n",
-       "      <th>person</th>\n",
-       "      <th>time</th>\n",
-       "      <th>value</th>\n",
-       "      <th>age</th>\n",
-       "      <th>became_member_on</th>\n",
-       "      <th>gender</th>\n",
-       "      <th>id</th>\n",
-       "      <th>income</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>78afa995795e4d85b5d9ceeca43f5fef</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}</td>\n",
-       "      <td>75</td>\n",
-       "      <td>20170509</td>\n",
-       "      <td>F</td>\n",
-       "      <td>78afa995795e4d85b5d9ceeca43f5fef</td>\n",
-       "      <td>100000.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>a03223e636434f42ac4c3df47e8bac43</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '0b1e1539f2cc45b7b9fa7c272da2e1d7'}</td>\n",
-       "      <td>118</td>\n",
-       "      <td>20170804</td>\n",
-       "      <td>None</td>\n",
-       "      <td>a03223e636434f42ac4c3df47e8bac43</td>\n",
-       "      <td>NaN</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>e2127556f4f64592b11af22de27a7932</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '2906b810c7d4411798c6938adc9daaa5'}</td>\n",
-       "      <td>68</td>\n",
-       "      <td>20180426</td>\n",
-       "      <td>M</td>\n",
-       "      <td>e2127556f4f64592b11af22de27a7932</td>\n",
-       "      <td>70000.0</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "            event                            person  time  \\\n",
-       "0  offer received  78afa995795e4d85b5d9ceeca43f5fef  0      \n",
-       "1  offer received  a03223e636434f42ac4c3df47e8bac43  0      \n",
-       "2  offer received  e2127556f4f64592b11af22de27a7932  0      \n",
-       "\n",
-       "                                              value  age  became_member_on  \\\n",
-       "0  {'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}  75   20170509           \n",
-       "1  {'offer id': '0b1e1539f2cc45b7b9fa7c272da2e1d7'}  118  20170804           \n",
-       "2  {'offer id': '2906b810c7d4411798c6938adc9daaa5'}  68   20180426           \n",
-       "\n",
-       "  gender                                id    income  \n",
-       "0  F      78afa995795e4d85b5d9ceeca43f5fef  100000.0  \n",
-       "1  None   a03223e636434f42ac4c3df47e8bac43 NaN        \n",
-       "2  M      e2127556f4f64592b11af22de27a7932  70000.0   "
-      ]
-     },
-     "execution_count": 96,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "new_data.head(3)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 97,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>event</th>\n",
-       "      <th>person</th>\n",
-       "      <th>time</th>\n",
-       "      <th>value</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>78afa995795e4d85b5d9ceeca43f5fef</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>a03223e636434f42ac4c3df47e8bac43</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '0b1e1539f2cc45b7b9fa7c272da2e1d7'}</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>e2127556f4f64592b11af22de27a7932</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '2906b810c7d4411798c6938adc9daaa5'}</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "            event                            person  time  \\\n",
-       "0  offer received  78afa995795e4d85b5d9ceeca43f5fef  0      \n",
-       "1  offer received  a03223e636434f42ac4c3df47e8bac43  0      \n",
-       "2  offer received  e2127556f4f64592b11af22de27a7932  0      \n",
-       "\n",
-       "                                              value  \n",
-       "0  {'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}  \n",
-       "1  {'offer id': '0b1e1539f2cc45b7b9fa7c272da2e1d7'}  \n",
-       "2  {'offer id': '2906b810c7d4411798c6938adc9daaa5'}  "
-      ]
-     },
-     "execution_count": 97,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "transaction.head(3)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "**- Person id is repetitive column in new_data with column name as \"person\" and \"id\", thus I will drop it from new_data having column name id**"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 99,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>event</th>\n",
-       "      <th>person</th>\n",
-       "      <th>time</th>\n",
-       "      <th>value</th>\n",
-       "      <th>age</th>\n",
-       "      <th>became_member_on</th>\n",
-       "      <th>gender</th>\n",
-       "      <th>income</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>78afa995795e4d85b5d9ceeca43f5fef</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}</td>\n",
-       "      <td>75</td>\n",
-       "      <td>20170509</td>\n",
-       "      <td>F</td>\n",
-       "      <td>100000.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>a03223e636434f42ac4c3df47e8bac43</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '0b1e1539f2cc45b7b9fa7c272da2e1d7'}</td>\n",
-       "      <td>118</td>\n",
-       "      <td>20170804</td>\n",
-       "      <td>None</td>\n",
-       "      <td>NaN</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>e2127556f4f64592b11af22de27a7932</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '2906b810c7d4411798c6938adc9daaa5'}</td>\n",
-       "      <td>68</td>\n",
-       "      <td>20180426</td>\n",
-       "      <td>M</td>\n",
-       "      <td>70000.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>3</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>8ec6ce2a7e7949b1bf142def7d0e0586</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': 'fafdcd668e3743c1bb461111dcafc2a4'}</td>\n",
-       "      <td>118</td>\n",
-       "      <td>20170925</td>\n",
-       "      <td>None</td>\n",
-       "      <td>NaN</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>4</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>68617ca6246f4fbc85e91a2a49552598</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '4d5c57ea9a6940dd891ad53e9dbe8da0'}</td>\n",
-       "      <td>118</td>\n",
-       "      <td>20171002</td>\n",
-       "      <td>None</td>\n",
-       "      <td>NaN</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "            event                            person  time  \\\n",
-       "0  offer received  78afa995795e4d85b5d9ceeca43f5fef  0      \n",
-       "1  offer received  a03223e636434f42ac4c3df47e8bac43  0      \n",
-       "2  offer received  e2127556f4f64592b11af22de27a7932  0      \n",
-       "3  offer received  8ec6ce2a7e7949b1bf142def7d0e0586  0      \n",
-       "4  offer received  68617ca6246f4fbc85e91a2a49552598  0      \n",
-       "\n",
-       "                                              value  age  became_member_on  \\\n",
-       "0  {'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}  75   20170509           \n",
-       "1  {'offer id': '0b1e1539f2cc45b7b9fa7c272da2e1d7'}  118  20170804           \n",
-       "2  {'offer id': '2906b810c7d4411798c6938adc9daaa5'}  68   20180426           \n",
-       "3  {'offer id': 'fafdcd668e3743c1bb461111dcafc2a4'}  118  20170925           \n",
-       "4  {'offer id': '4d5c57ea9a6940dd891ad53e9dbe8da0'}  118  20171002           \n",
-       "\n",
-       "  gender    income  \n",
-       "0  F      100000.0  \n",
-       "1  None  NaN        \n",
-       "2  M      70000.0   \n",
-       "3  None  NaN        \n",
-       "4  None  NaN        "
-      ]
-     },
-     "execution_count": 99,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "new_data = new_data.drop(columns=[\"id\"])\n",
-    "new_data.head()"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "**- Distinct events**"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 102,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "transaction        138953\n",
-       "offer received     76277 \n",
-       "offer viewed       57725 \n",
-       "offer completed    33579 \n",
-       "Name: event, dtype: int64"
-      ]
-     },
-     "execution_count": 102,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "distinct_events = new_data['event'].value_counts()\n",
-    "distinct_events"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "**- Top 3 rows for each distinct event**"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 103,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>event</th>\n",
-       "      <th>person</th>\n",
-       "      <th>time</th>\n",
-       "      <th>value</th>\n",
-       "      <th>age</th>\n",
-       "      <th>became_member_on</th>\n",
-       "      <th>gender</th>\n",
-       "      <th>income</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>12654</th>\n",
-       "      <td>transaction</td>\n",
-       "      <td>02c083884c7d45b39cc68e1314fec56c</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'amount': 0.8300000000000001}</td>\n",
-       "      <td>20</td>\n",
-       "      <td>20160711</td>\n",
-       "      <td>F</td>\n",
-       "      <td>30000.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>12657</th>\n",
-       "      <td>transaction</td>\n",
-       "      <td>9fa9ae8f57894cc9a3b8a9bbe0fc1b2f</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'amount': 34.56}</td>\n",
-       "      <td>42</td>\n",
-       "      <td>20160117</td>\n",
-       "      <td>M</td>\n",
-       "      <td>96000.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>12659</th>\n",
-       "      <td>transaction</td>\n",
-       "      <td>54890f68699049c2a04d415abc25e717</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'amount': 13.23}</td>\n",
-       "      <td>36</td>\n",
-       "      <td>20171228</td>\n",
-       "      <td>M</td>\n",
-       "      <td>56000.0</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "             event                            person  time  \\\n",
-       "12654  transaction  02c083884c7d45b39cc68e1314fec56c  0      \n",
-       "12657  transaction  9fa9ae8f57894cc9a3b8a9bbe0fc1b2f  0      \n",
-       "12659  transaction  54890f68699049c2a04d415abc25e717  0      \n",
-       "\n",
-       "                                value  age  became_member_on gender   income  \n",
-       "12654  {'amount': 0.8300000000000001}  20   20160711          F      30000.0  \n",
-       "12657  {'amount': 34.56}               42   20160117          M      96000.0  \n",
-       "12659  {'amount': 13.23}               36   20171228          M      56000.0  "
-      ]
-     },
-     "execution_count": 103,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "new_data[new_data['event']=='transaction'].head(3)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 104,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>event</th>\n",
-       "      <th>person</th>\n",
-       "      <th>time</th>\n",
-       "      <th>value</th>\n",
-       "      <th>age</th>\n",
-       "      <th>became_member_on</th>\n",
-       "      <th>gender</th>\n",
-       "      <th>income</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>78afa995795e4d85b5d9ceeca43f5fef</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}</td>\n",
-       "      <td>75</td>\n",
-       "      <td>20170509</td>\n",
-       "      <td>F</td>\n",
-       "      <td>100000.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>a03223e636434f42ac4c3df47e8bac43</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '0b1e1539f2cc45b7b9fa7c272da2e1d7'}</td>\n",
-       "      <td>118</td>\n",
-       "      <td>20170804</td>\n",
-       "      <td>None</td>\n",
-       "      <td>NaN</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>offer received</td>\n",
-       "      <td>e2127556f4f64592b11af22de27a7932</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '2906b810c7d4411798c6938adc9daaa5'}</td>\n",
-       "      <td>68</td>\n",
-       "      <td>20180426</td>\n",
-       "      <td>M</td>\n",
-       "      <td>70000.0</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "            event                            person  time  \\\n",
-       "0  offer received  78afa995795e4d85b5d9ceeca43f5fef  0      \n",
-       "1  offer received  a03223e636434f42ac4c3df47e8bac43  0      \n",
-       "2  offer received  e2127556f4f64592b11af22de27a7932  0      \n",
-       "\n",
-       "                                              value  age  became_member_on  \\\n",
-       "0  {'offer id': '9b98b8c7a33c4b65b9aebfe6a799e6d9'}  75   20170509           \n",
-       "1  {'offer id': '0b1e1539f2cc45b7b9fa7c272da2e1d7'}  118  20170804           \n",
-       "2  {'offer id': '2906b810c7d4411798c6938adc9daaa5'}  68   20180426           \n",
-       "\n",
-       "  gender    income  \n",
-       "0  F      100000.0  \n",
-       "1  None  NaN        \n",
-       "2  M      70000.0   "
-      ]
-     },
-     "execution_count": 104,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "new_data[new_data['event']=='offer received'].head(3)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 105,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>event</th>\n",
-       "      <th>person</th>\n",
-       "      <th>time</th>\n",
-       "      <th>value</th>\n",
-       "      <th>age</th>\n",
-       "      <th>became_member_on</th>\n",
-       "      <th>gender</th>\n",
-       "      <th>income</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>12650</th>\n",
-       "      <td>offer viewed</td>\n",
-       "      <td>389bc3fa690240e798340f5a15918d5c</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': 'f19421c1d4aa40978ebb69ca19b0e20d'}</td>\n",
-       "      <td>65</td>\n",
-       "      <td>20180209</td>\n",
-       "      <td>M</td>\n",
-       "      <td>53000.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>12651</th>\n",
-       "      <td>offer viewed</td>\n",
-       "      <td>d1ede868e29245ea91818a903fec04c6</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '5a8bc65990b245e5a138643cd4eb9837'}</td>\n",
-       "      <td>53</td>\n",
-       "      <td>20170916</td>\n",
-       "      <td>O</td>\n",
-       "      <td>52000.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>12652</th>\n",
-       "      <td>offer viewed</td>\n",
-       "      <td>102e9454054946fda62242d2e176fdce</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer id': '4d5c57ea9a6940dd891ad53e9dbe8da0'}</td>\n",
-       "      <td>69</td>\n",
-       "      <td>20160814</td>\n",
-       "      <td>F</td>\n",
-       "      <td>57000.0</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "              event                            person  time  \\\n",
-       "12650  offer viewed  389bc3fa690240e798340f5a15918d5c  0      \n",
-       "12651  offer viewed  d1ede868e29245ea91818a903fec04c6  0      \n",
-       "12652  offer viewed  102e9454054946fda62242d2e176fdce  0      \n",
-       "\n",
-       "                                                  value  age  \\\n",
-       "12650  {'offer id': 'f19421c1d4aa40978ebb69ca19b0e20d'}  65    \n",
-       "12651  {'offer id': '5a8bc65990b245e5a138643cd4eb9837'}  53    \n",
-       "12652  {'offer id': '4d5c57ea9a6940dd891ad53e9dbe8da0'}  69    \n",
-       "\n",
-       "       became_member_on gender   income  \n",
-       "12650  20180209          M      53000.0  \n",
-       "12651  20170916          O      52000.0  \n",
-       "12652  20160814          F      57000.0  "
-      ]
-     },
-     "execution_count": 105,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "new_data[new_data['event']=='offer viewed'].head(3)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 106,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>event</th>\n",
-       "      <th>person</th>\n",
-       "      <th>time</th>\n",
-       "      <th>value</th>\n",
-       "      <th>age</th>\n",
-       "      <th>became_member_on</th>\n",
-       "      <th>gender</th>\n",
-       "      <th>income</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>12658</th>\n",
-       "      <td>offer completed</td>\n",
-       "      <td>9fa9ae8f57894cc9a3b8a9bbe0fc1b2f</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer_id': '2906b810c7d4411798c6938adc9daaa5', 'reward': 2}</td>\n",
-       "      <td>42</td>\n",
-       "      <td>20160117</td>\n",
-       "      <td>M</td>\n",
-       "      <td>96000.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>12672</th>\n",
-       "      <td>offer completed</td>\n",
-       "      <td>fe97aa22dd3e48c8b143116a8403dd52</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer_id': 'fafdcd668e3743c1bb461111dcafc2a4', 'reward': 2}</td>\n",
-       "      <td>39</td>\n",
-       "      <td>20171217</td>\n",
-       "      <td>F</td>\n",
-       "      <td>67000.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>12679</th>\n",
-       "      <td>offer completed</td>\n",
-       "      <td>629fc02d56414d91bca360decdfa9288</td>\n",
-       "      <td>0</td>\n",
-       "      <td>{'offer_id': '9b98b8c7a33c4b65b9aebfe6a799e6d9', 'reward': 5}</td>\n",
-       "      <td>52</td>\n",
-       "      <td>20180605</td>\n",
-       "      <td>M</td>\n",
-       "      <td>72000.0</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "                 event                            person  time  \\\n",
-       "12658  offer completed  9fa9ae8f57894cc9a3b8a9bbe0fc1b2f  0      \n",
-       "12672  offer completed  fe97aa22dd3e48c8b143116a8403dd52  0      \n",
-       "12679  offer completed  629fc02d56414d91bca360decdfa9288  0      \n",
-       "\n",
-       "                                                               value  age  \\\n",
-       "12658  {'offer_id': '2906b810c7d4411798c6938adc9daaa5', 'reward': 2}  42    \n",
-       "12672  {'offer_id': 'fafdcd668e3743c1bb461111dcafc2a4', 'reward': 2}  39    \n",
-       "12679  {'offer_id': '9b98b8c7a33c4b65b9aebfe6a799e6d9', 'reward': 5}  52    \n",
-       "\n",
-       "       became_member_on gender   income  \n",
-       "12658  20160117          M      96000.0  \n",
-       "12672  20171217          F      67000.0  \n",
-       "12679  20180605          M      72000.0  "
-      ]
-     },
-     "execution_count": 106,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "new_data[new_data['event']=='offer completed'].head(3)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "**- Find out which gender receives more offer?**"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 110,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "a = new_data[new_data['event']=='offer received']['gender'].value_counts()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 114,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "image/png": "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\n",
-      "text/plain": [
-       "<Figure size 432x288 with 1 Axes>"
-      ]
-     },
-     "metadata": {
-      "needs_background": "light"
-     },
-     "output_type": "display_data"
-    }
-   ],
-   "source": [
-    "plt.bar(a.index, list(a), color=['blue','pink','black']);"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
   }
  ],
  "metadata": {
